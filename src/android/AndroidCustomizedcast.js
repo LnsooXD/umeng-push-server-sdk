@@ -5,6 +5,7 @@ const AndroidNotification = require('../AndroidNotification');
 class AndroidCustomizedcast extends AndroidNotification {
 
     constructor(appKey, appMasterSecret) {
+        super();
         this.appMasterSecret = appMasterSecret;
         this.setPredefinedKeyValue("appkey", appKey);
         this.setPredefinedKeyValue("type", "customizedcast");

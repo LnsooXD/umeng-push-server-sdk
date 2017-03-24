@@ -12,6 +12,7 @@ const isPolicyKey = UmengNotification.isPolicyKey;
 
 class IOSNotification extends UmengNotification {
     constructor() {
+        super();
     }
 
     setPredefinedKeyValue(key, value) {

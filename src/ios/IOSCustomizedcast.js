@@ -4,6 +4,7 @@ const IOSNotification = require('../IOSNotification');
 
 class IOSCustomizedcast extends IOSNotification {
     constructor(appKey, appMasterSecret) {
+        super();
         this.appMasterSecret = appMasterSecret;
         this.setPredefinedKeyValue("appkey", appKey);
         this.setPredefinedKeyValue("type", "customizedcast");

@@ -30,6 +30,7 @@ const DisplayType = utils.readonlyPropertyObject({
 class AndroidNotification extends UmengNotification {
 
     constructor() {
+        super();
     }
 
     // static AfterOpenAction = AfterOpenAction;
@@ -92,7 +93,7 @@ class AndroidNotification extends UmengNotification {
         let payloadJson = null;
         let extraJson = null;
         if (this.rootJson.hasOwnProperty("payload")) {
-            payloadJson = this.rootJson.getJSONObject("payload");
+            payloadJson = this.rootJson["payload"];
         } else {
             payloadJson = {};
             this.rootJson['payload'] = payloadJson;
