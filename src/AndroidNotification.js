@@ -233,6 +233,6 @@ AndroidNotification.isPayloadKey = isPayloadKey;
 AndroidNotification.isBodyKey = isBodyKey;
 
 utils.readonlyProperty(AndroidNotification, 'AfterOpenAction', AfterOpenAction);
-utils.readonlyProperty(AndroidNotification, 'DisplayType', AfterOpenAction);
+utils.readonlyProperty(AndroidNotification, 'DisplayType', DisplayType);
 
 exports = module.exports = AndroidNotification;
