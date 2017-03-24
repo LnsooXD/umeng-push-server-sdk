@@ -1,7 +1,9 @@
-exports = module.exports = IOSCustomizedcast;
-const IOSNotification = require('../IOSNotification');
+exports = module.exports = AndroidCustomizedcast;
+const AndroidNotification = require('../AndroidNotification');
 
-class IOSCustomizedcast extends IOSNotification {
+
+class AndroidCustomizedcast extends AndroidNotification {
+
     constructor(appKey, appMasterSecret) {
         this.appMasterSecret = appMasterSecret;
         this.setPredefinedKeyValue("appkey", appKey);
@@ -17,4 +19,5 @@ class IOSCustomizedcast extends IOSNotification {
         this.setPredefinedKeyValue("file_id", fileId);
         this.setPredefinedKeyValue("alias_type", aliasType);
     }
+
 }

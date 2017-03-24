@@ -1,6 +1,7 @@
 exports = module.exports = IOSFilecast;
 const IOSNotification = require('../IOSNotification');
 
+
 class IOSFilecast extends IOSNotification {
     constructor(appKey, appMasterSecret) {
         this.appMasterSecret = appMasterSecret;

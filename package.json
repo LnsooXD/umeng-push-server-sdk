@@ -3,10 +3,14 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "test": "node ./bin/www"
+    "build": "babel src -d lib"
   },
   "dependencies": {
     "debug": "~2.6.0",
     "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-preset-latest": "^6.24.0"
   }
 }

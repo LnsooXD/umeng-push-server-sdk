@@ -1,18 +1,20 @@
 'use strict';
-
 exports = module.exports = IOSNotification;
 
 const UmengNotification = require('./UmengNotification');
 const utils = require('./utils');
 
-const APS_KEYS = ["alert", "badge", "sound", "content-available"];
+const APS_KEYS = [
+    "alert", "badge", "sound", "content-available"
+];
 
 const isRootKey = UmengNotification.isRootKey;
 const isPolicyKey = UmengNotification.isPolicyKey;
 const isApsKey = IOSNotification.isApsKey;
 
 class IOSNotification extends UmengNotification {
-    constructor() {}
+    constructor() {
+    }
 
     static isApsKey(key) {
         return utils.containsValue(APS_KEYS, key);

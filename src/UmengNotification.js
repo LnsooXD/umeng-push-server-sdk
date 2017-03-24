@@ -1,12 +1,15 @@
 'use strict';
-
 exports = module.exports = UmengNotification;
 
 // Keys can be set in the root level
-const ROOT_KEYS = ["appkey", "timestamp", "type", "device_tokens", "alias", "alias_type", "file_id", "filter", "production_mode", "feedback", "description", "thirdparty_id"];
+const ROOT_KEYS = [
+    "appkey", "timestamp", "type", "device_tokens", "alias", "alias_type", "file_id",
+    "filter", "production_mode", "feedback", "description", "thirdparty_id"];
 
 // Keys can be set in the policy level
-const POLICY_KEYS = ["start_time", "expire_time", "max_send_num"];
+const POLICY_KEYS = [
+    "start_time", "expire_time", "max_send_num"
+];
 
 const utils = require('./utils');
 
@@ -25,7 +28,8 @@ class UmengNotification {
         return utils.containsValue(POLICY_KEYS, key);
     }
 
-    setPredefinedKeyValue(key, value) {}
+    setPredefinedKeyValue(key, value) {
+    }
 
     ///测试模式设置（true/empty: 正式模式, false: 测试模式）
     setProductionMode(mode) {
@@ -40,6 +44,7 @@ class UmengNotification {
     setTestMode() {
         this.setProductionMode(false);
     }
+
 
     getPostBody() {
         return JSON.stringify(this.rootJson);

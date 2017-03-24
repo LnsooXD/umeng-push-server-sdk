@@ -41,3 +41,7 @@ function readonlyPropertyObject(obj) {
     }
     return result;
 }
+
+
+
+

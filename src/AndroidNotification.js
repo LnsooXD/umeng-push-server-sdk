@@ -1,12 +1,15 @@
 'use strict';
-
 exports = module.exports = AndroidNotification;
 
 // Keys can be set in the payload level
-const PAYLOAD_KEYS = ["display_type"];
+const PAYLOAD_KEYS = [
+    "display_type"
+];
 
 // Keys can be set in the body level
-const BODY_KEYS = ["ticker", "title", "text", "builder_id", "icon", "largeIcon", "img", "play_vibrate", "play_lights", "play_sound", "sound", "after_open", "url", "activity", "custom"];
+const BODY_KEYS = [
+    "ticker", "title", "text", "builder_id", "icon", "largeIcon", "img", "play_vibrate", "play_lights", "play_sound",
+    "sound", "after_open", "url", "activity", "custom"];
 
 const UmengNotification = require('./UmengNotification');
 const utils = require('./utils');
@@ -16,15 +19,15 @@ const isPayloadKey = AndroidNotification.isPayloadKey;
 const isBodyKey = AndroidNotification.isBodyKey;
 
 const AfterOpenAction = utils.readonlyPropertyObject({
-    go_app: 'go_app', //打开应用
-    go_url: 'go_url', //跳转到URL
-    go_activity: 'go_activity', //打开特定的activity
-    go_custom: 'go_custom' //用户自定义内容。
+    go_app: 'go_app',//打开应用
+    go_url: 'go_url',//跳转到URL
+    go_activity: 'go_activity',//打开特定的activity
+    go_custom: 'go_custom'//用户自定义内容。
 });
 
 const DisplayType = utils.readonlyPropertyObject({
-    NOTIFICATION: 'notification', ///通知:消息送达到用户设备后，由友盟SDK接管处理并在通知栏上显示通知内容。
-    MESSAGE: 'message' ///消息:消息送达到用户设备后，消息内容透传给应用自身进行解析处理。
+    NOTIFICATION: 'notification',///通知:消息送达到用户设备后，由友盟SDK接管处理并在通知栏上显示通知内容。
+    MESSAGE: 'message'///消息:消息送达到用户设备后，消息内容透传给应用自身进行解析处理。
 });
 
 utils.readonlyProperty(AndroidNotification, 'AfterOpenAction', AfterOpenAction);
@@ -32,7 +35,8 @@ utils.readonlyProperty(DisplayType, 'DisplayType', AfterOpenAction);
 
 class AndroidNotification extends UmengNotification {
 
-    constructor() {}
+    constructor() {
+    }
 
     static isPayloadKey(key) {
         return utils.containsValue(PAYLOAD_KEYS, key);
@@ -117,6 +121,7 @@ class AndroidNotification extends UmengNotification {
         extraJson[key] = value;
         return true;
     }
+
 
     //
     setDisplayType(type) {
