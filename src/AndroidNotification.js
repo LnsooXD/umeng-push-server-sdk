@@ -27,9 +27,6 @@ const DisplayType = utils.readonlyPropertyObject({
     MESSAGE: 'message'///消息:消息送达到用户设备后，消息内容透传给应用自身进行解析处理。
 });
 
-utils.readonlyProperty(AndroidNotification, 'AfterOpenAction', AfterOpenAction);
-utils.readonlyProperty(DisplayType, 'DisplayType', AfterOpenAction);
-
 class AndroidNotification extends UmengNotification {
 
     constructor() {
@@ -233,5 +230,8 @@ function isBodyKey(key) {
 
 AndroidNotification.isPayloadKey = isPayloadKey;
 AndroidNotification.isBodyKey = isBodyKey;
+
+utils.readonlyProperty(AndroidNotification, 'AfterOpenAction', AfterOpenAction);
+utils.readonlyProperty(AndroidNotification, 'DisplayType', AfterOpenAction);
 
 exports = module.exports = AndroidNotification;
