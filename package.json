@@ -1,14 +1,32 @@
 {
   "name": "umeng-push-server-sdk",
   "version": "0.0.1",
-  "private": true,
+  "license": "MIT",
+  "description": "Umeng Push Server SDK for Nodejs",
+  "author": "LnsooXD <lnsooxd@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LnsooXD/umeng-push-server-sdk.git"
+  },
   "files": [
     "lib",
-    "LICENSE"
+    "LICENSE",
+    "README.md"
+  ],
+  "keywords": [
+    "umeng",
+    "push",
+    "umeng push",
+    "umeng push sdk",
+    "u push",
+    "u push sdk"
   ],
   "main": "./lib/index.js",
   "scripts": {
     "build": "babel src -d lib"
+  },
+  "engines": {
+    "node": ">= 4"
   },
   "dependencies": {
     "debug": "~2.6.0",
