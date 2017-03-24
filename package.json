@@ -1,0 +1,12 @@
+{
+  "name": "umeng-push-server-sdk",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "test": "node ./bin/www"
+  },
+  "dependencies": {
+    "debug": "~2.6.0",
+    "request": "^2.81.0"
+  }
+}
