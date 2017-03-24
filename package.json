@@ -2,6 +2,11 @@
   "name": "umeng-push-server-sdk",
   "version": "0.0.1",
   "private": true,
+  "files": [
+    "lib",
+    "LICENSE"
+  ],
+  "main": "./lib/index.js",
   "scripts": {
     "build": "babel src -d lib"
   },
