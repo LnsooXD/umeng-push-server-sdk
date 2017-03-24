@@ -1,5 +1,4 @@
 'use strict';
-exports = module.exports = AndroidNotification;
 
 // Keys can be set in the payload level
 const PAYLOAD_KEYS = [
@@ -233,3 +232,5 @@ class AndroidNotification extends UmengNotification {
     }
 
 }
+
+exports = module.exports = AndroidNotification;

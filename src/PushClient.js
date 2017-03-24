@@ -1,5 +1,4 @@
 'use strict';
-exports = module.exports = PushClient;
 
 // The user agent
 const USER_AGENT = 'Mozilla/5.0';
@@ -104,3 +103,5 @@ class PushClient {
         return json['data']['file_id'] + '';
     }
 }
+
+exports = module.exports = PushClient;

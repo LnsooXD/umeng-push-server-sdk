@@ -1,5 +1,4 @@
 'use strict';
-exports = module.exports = IOSNotification;
 
 const UmengNotification = require('./UmengNotification');
 const utils = require('./utils');
@@ -91,3 +90,5 @@ class IOSNotification extends UmengNotification {
         this.setPredefinedKeyValue("content-available", contentAvailable);
     }
 }
+
+exports = module.exports = IOSNotification;

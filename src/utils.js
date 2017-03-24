@@ -1,12 +1,5 @@
 'use strict';
 
-exports = module.exports = {
-    md5Hex: md5Hex,
-    containsValue: containsValue,
-    readonlyProperty: readonlyProperty,
-    readonlyPropertyObject: readonlyPropertyObject
-};
-
 const crypto = require('crypto');
 
 function md5Hex(value) {
@@ -41,6 +34,13 @@ function readonlyPropertyObject(obj) {
     }
     return result;
 }
+
+exports = module.exports = {
+    md5Hex: md5Hex,
+    containsValue: containsValue,
+    readonlyProperty: readonlyProperty,
+    readonlyPropertyObject: readonlyPropertyObject
+};
 
 
 

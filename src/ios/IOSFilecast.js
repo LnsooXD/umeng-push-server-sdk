@@ -1,4 +1,5 @@
-exports = module.exports = IOSFilecast;
+'use strict';
+
 const IOSNotification = require('../IOSNotification');
 
 
@@ -13,3 +14,5 @@ class IOSFilecast extends IOSNotification {
         this.setPredefinedKeyValue("file_id", fileId);
     }
 }
+
+exports = module.exports = IOSFilecast;

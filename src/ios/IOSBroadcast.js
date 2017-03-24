@@ -1,4 +1,5 @@
-exports = module.exports = IOSBroadcast;
+'use strict';
+
 const IOSNotification = require('../IOSNotification');
 
 class IOSBroadcast extends IOSNotification {
@@ -8,3 +9,5 @@ class IOSBroadcast extends IOSNotification {
         this.setPredefinedKeyValue("type", "broadcast");
     }
 }
+
+exports = module.exports = IOSBroadcast;

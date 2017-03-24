@@ -1,6 +1,6 @@
-exports = module.exports = AndroidCustomizedcast;
-const AndroidNotification = require('../AndroidNotification');
+'use strict';
 
+const AndroidNotification = require('../AndroidNotification');
 
 class AndroidCustomizedcast extends AndroidNotification {
 
@@ -21,3 +21,5 @@ class AndroidCustomizedcast extends AndroidNotification {
     }
 
 }
+
+exports = module.exports = AndroidCustomizedcast;

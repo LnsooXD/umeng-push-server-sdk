@@ -1,5 +1,4 @@
 'use strict';
-exports = module.exports = UmengNotification;
 
 // Keys can be set in the root level
 const ROOT_KEYS = [
@@ -70,3 +69,5 @@ class UmengNotification {
         this.setPredefinedKeyValue("max_send_num", num);
     }
 }
+
+exports = module.exports = UmengNotification;

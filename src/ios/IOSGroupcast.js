@@ -1,4 +1,5 @@
-exports = module.exports = IOSGroupcast;
+'use strict';
+
 const IOSNotification = require('../IOSNotification');
 
 class IOSGroupcast extends IOSNotification {
@@ -13,3 +14,5 @@ class IOSGroupcast extends IOSNotification {
         this.setPredefinedKeyValue("filter", filter);
     }
 }
+
+exports = module.exports = IOSGroupcast;

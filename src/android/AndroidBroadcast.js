@@ -1,4 +1,5 @@
-exports = module.exports = AndroidBroadcast;
+'use strict';
+
 const AndroidNotification = require('../AndroidNotification');
 
 class AndroidBroadcast extends AndroidNotification {
@@ -9,3 +10,5 @@ class AndroidBroadcast extends AndroidNotification {
     }
 
 }
+
+exports = module.exports = AndroidBroadcast;

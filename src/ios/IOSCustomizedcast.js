@@ -1,4 +1,5 @@
-exports = module.exports = IOSCustomizedcast;
+'use strict';
+
 const IOSNotification = require('../IOSNotification');
 
 class IOSCustomizedcast extends IOSNotification {
@@ -18,3 +19,5 @@ class IOSCustomizedcast extends IOSNotification {
         this.setPredefinedKeyValue("alias_type", aliasType);
     }
 }
+
+exports = module.exports = IOSCustomizedcast;
