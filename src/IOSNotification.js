@@ -9,14 +9,9 @@ const APS_KEYS = [
 
 const isRootKey = UmengNotification.isRootKey;
 const isPolicyKey = UmengNotification.isPolicyKey;
-const isApsKey = IOSNotification.isApsKey;
 
 class IOSNotification extends UmengNotification {
     constructor() {
-    }
-
-    static isApsKey(key) {
-        return utils.containsValue(APS_KEYS, key);
     }
 
     setPredefinedKeyValue(key, value) {
@@ -90,5 +85,12 @@ class IOSNotification extends UmengNotification {
         this.setPredefinedKeyValue("content-available", contentAvailable);
     }
 }
+
+
+function isApsKey(key) {
+    return utils.containsValue(APS_KEYS, key);
+}
+
+IOSNotification.isApsKey = isApsKey;
 
 exports = module.exports = IOSNotification;

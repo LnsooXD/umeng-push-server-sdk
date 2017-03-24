@@ -14,8 +14,6 @@ const UmengNotification = require('./UmengNotification');
 const utils = require('./utils');
 const isRootKey = UmengNotification.isRootKey;
 const isPolicyKey = UmengNotification.isPolicyKey;
-const isPayloadKey = AndroidNotification.isPayloadKey;
-const isBodyKey = AndroidNotification.isBodyKey;
 
 const AfterOpenAction = utils.readonlyPropertyObject({
     go_app: 'go_app',//打开应用
@@ -35,14 +33,6 @@ utils.readonlyProperty(DisplayType, 'DisplayType', AfterOpenAction);
 class AndroidNotification extends UmengNotification {
 
     constructor() {
-    }
-
-    static isPayloadKey(key) {
-        return utils.containsValue(PAYLOAD_KEYS, key);
-    }
-
-    static isBodyKey(key) {
-        return utils.containsValue(BODY_KEYS, key);
     }
 
     // static AfterOpenAction = AfterOpenAction;
@@ -232,5 +222,16 @@ class AndroidNotification extends UmengNotification {
     }
 
 }
+
+function isPayloadKey(key) {
+    return utils.containsValue(PAYLOAD_KEYS, key);
+}
+
+function isBodyKey(key) {
+    return utils.containsValue(BODY_KEYS, key);
+}
+
+AndroidNotification.isPayloadKey = isPayloadKey;
+AndroidNotification.isBodyKey = isBodyKey;
 
 exports = module.exports = AndroidNotification;

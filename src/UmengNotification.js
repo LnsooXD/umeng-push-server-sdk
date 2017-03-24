@@ -19,14 +19,6 @@ class UmengNotification {
         this.appMasterSecret = null;
     }
 
-    static isRootKey(key) {
-        return utils.containsValue(ROOT_KEYS, key);
-    }
-
-    static isPolicyKey(key) {
-        return utils.containsValue(POLICY_KEYS, key);
-    }
-
     setPredefinedKeyValue(key, value) {
     }
 
@@ -69,5 +61,16 @@ class UmengNotification {
         this.setPredefinedKeyValue("max_send_num", num);
     }
 }
+
+function isRootKey(key) {
+    return utils.containsValue(ROOT_KEYS, key);
+}
+
+function isPolicyKey(key) {
+    return utils.containsValue(POLICY_KEYS, key);
+}
+
+UmengNotification.isRootKey = isRootKey;
+UmengNotification.isPolicyKey = isPolicyKey;
 
 exports = module.exports = UmengNotification;
