@@ -1,7 +1,17 @@
 {
   "presets": [
-    ["latest", {
-      "es2015": false
-    }]
+    [
+      "latest",
+      {
+        "es2015": false
+      }
+    ]
+  ],
+  "plugins": [
+    "check-es2015-constants",
+    "transform-es2015-arrow-functions",
+    "transform-es2015-classes",
+    "transform-es2015-for-of",
+    "transform-async-to-generator"
   ]
 }
