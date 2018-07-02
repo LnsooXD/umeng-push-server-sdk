@@ -32,6 +32,9 @@ unicast.setDisplayType(AndroidNotification.DisplayType.NOTIFICATION);
 unicast.setProductionMode();
 // Set customized fields
 unicast.setExtraField("test", "helloworld");
+// Set Huawei Xiaomi Flyme Notify
+unicast.setMipush(true);
+unicast.setMi_activity('com.umeng.message.example.MipushTestActivity');
 
 client.send(unicast);
 ```
