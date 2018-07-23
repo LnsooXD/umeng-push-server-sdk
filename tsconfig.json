@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "noImplicitAny": true,
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "allowUnreachableCode": true,
+    "allowUnusedLabels": true,
+    "declaration": true,
+    "alwaysStrict": true,
+    "diagnostics": true,
+    "outDir": "lib",
+    "noEmitOnError": true,
+    "noErrorTruncation": true,
+    "locale": "en-us",
+    "target": "es2015"
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}

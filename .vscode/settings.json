@@ -1,0 +1,5 @@
+{
+    "fileheader.Author": "LnsooXD<LnsooXD@gmail.com>",
+    "fileheader.LastModifiedBy": "LnsooXD<LnsooXD@gmail.com>",
+    "fileheader.tpl": "/**\r\n * This file is part of umeng-push-server-sdk.\r\n * @Author: {author} \r\n * @Date: {createTime} \r\n * @Last Modified by: {lastModifiedBy} \r\n * @Last Modified time: {updateTime}\r\n * Copyright(c) 2018 {author}\r\n * MIT Licensed\r\n**/\r\n"
+}

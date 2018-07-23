@@ -1,4 +1,5 @@
-*~
+yarn-error.log
+build
 .DS_Store
 .idea
 node_modules
