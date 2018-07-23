@@ -61,3 +61,16 @@ unicast.setProductionMode();
 unicast.setCustomizedField("test", "helloworld");
 client.send(unicast);
 ```
+
+## Author
+
+- [LnsooXD](https://github.com/LnsooXD)
+
+## Contributors
+
+- [LnsooXD](https://github.com/LnsooXD)
+- [ZhichengChen](https://github.com/ZhichengChen)
+
+## License
+
+- [MIT](http://spdx.org/licenses/MIT)
