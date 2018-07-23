@@ -3,7 +3,8 @@
 // Keys can be set in the root level
 const ROOT_KEYS = [
     "appkey", "timestamp", "type", "device_tokens", "alias", "alias_type", "file_id",
-    "filter", "production_mode", "feedback", "description", "thirdparty_id"];
+    "filter", "production_mode", "feedback", "description", "thirdparty_id",
+    "mipush", "mi_activity"];
 
 // Keys can be set in the policy level
 const POLICY_KEYS = [
@@ -59,6 +60,24 @@ class UmengNotification {
     ///发送限速，每秒发送的最大条数。
     setMaxSendNum(num) {
         this.setPredefinedKeyValue("max_send_num", num);
+    }
+
+    //是否开启华为小米魅族弹窗
+    setMipush(mipush) {
+        if (arguments.length <= 0) {
+            this.setProductionMode(true);
+        } else {
+            this.setPredefinedKeyValue("mipush", mipush);
+        }
+    }
+
+    //华为小米魅族弹窗打开的页面
+    setMi_activity(mi_activity) {
+        if (arguments.length <= 0) {
+            this.setProductionMode(true);
+        } else {
+            this.setPredefinedKeyValue("mi_activity", mi_activity);
+        }
     }
 }
 
