@@ -62,6 +62,8 @@ unicast.setCustomizedField("test", "helloworld");
 client.send(unicast);
 ```
 
+> For a full-fearture demo, see [Demo.ts](https://github.com/LnsooXD/umeng-push-server-sdk/blob/master/examples/Demo.ts) and [RunDemo.ts](https://github.com/LnsooXD/umeng-push-server-sdk/blob/master/examples/RunDemo.ts)
+
 ## Author
 
 - [LnsooXD](https://github.com/LnsooXD)
