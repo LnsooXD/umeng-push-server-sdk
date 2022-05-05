@@ -23,8 +23,12 @@ const UPLOAD_PATH = '/upload';
 const POST_PATH = '/api/send';
 
 import utils = require('./utils');
-import request = require('request');
-import {Options, Response} from 'request';
+// import request = require('request');
+// import {Options, Response} from 'request';
+
+import http = require('http');
+import Url = require('url');
+
 const debug = require('debug')('push-client');
 
 import UmengNotification = require('./UmengNotification');
@@ -35,14 +39,17 @@ interface SendResult {
   readonly body: any;
 }
 
-const send = (options: Options): Promise<SendResult> => {
+const httpPost = (options: http.RequestOptions): Promise<SendResult> => {
   const cpu = new CallbackPromise<any, SendResult>();
-  request(options, (err, response, body) => {
-    cpu.callback(err, {
-      response,
-      body
-    });
-  });
+
+  http.request(options)
+
+  // request(options, (err, response, body) => {
+  //   cpu.callback(err, {
+  //     response,
+  //     body
+  //   });
+  // });
   return cpu.promise;
 };
 
@@ -61,7 +68,9 @@ class PushClient {
     let sign = utils.md5Hex('POST' + url + postBody + msg.appMasterSecret);
     url = url + '?sign=' + sign;
 
-    let options: Options = {
+    const parsedUrl = Url.parse(url)
+
+    let options: http.RequestOptions = {
       url: url,
       method: 'POST',
       body: postBody,
@@ -70,7 +79,7 @@ class PushClient {
       }
     };
 
-    const result: SendResult = await send(options);
+    const result: SendResult = await httpPost(options);
     const statusCode = result.response.statusCode;
     debug('status code: %d', statusCode);
     debug('result: ', result);
@@ -107,7 +116,7 @@ class PushClient {
       }
     };
 
-    const result = await send(options);
+    const result = await httpPost(options);
     debug('status code: %d', result.response.statusCode);
 
     let json = JSON.parse(result.body);
